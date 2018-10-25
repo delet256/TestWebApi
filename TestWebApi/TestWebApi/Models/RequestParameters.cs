@@ -5,10 +5,22 @@ using System.Threading.Tasks;
 
 namespace TestWebApi.Models
 {
+    /// <summary>
+    /// Model for request 
+    /// </summary>
     public class RequestParameters
     {
-        public string TokenApi { get; set; }
+        /// <summary>
+        /// Gets or sets Api Token
+        /// </summary>
+        public string ApiToken { get; set; }
+        /// <summary>
+        /// Gets or sets User Key
+        /// </summary>
         public string UserKey { get; set; }
+        /// <summary>
+        /// Gets or sets Message
+        /// </summary>
         public string Message { get; set; }
 
     }

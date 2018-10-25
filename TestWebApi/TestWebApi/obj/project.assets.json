@@ -12786,11 +12786,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\delit\\source\\repos\\TestWebApi\\TestWebApi\\TestWebApi.csproj",
+      "projectUniqueName": "C:\\delet256\\Git\\TestWebApi\\TestWebApi\\TestWebApi\\TestWebApi.csproj",
       "projectName": "TestWebApi",
-      "projectPath": "C:\\Users\\delit\\source\\repos\\TestWebApi\\TestWebApi\\TestWebApi.csproj",
+      "projectPath": "C:\\delet256\\Git\\TestWebApi\\TestWebApi\\TestWebApi\\TestWebApi.csproj",
       "packagesPath": "C:\\Users\\delit\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\delit\\source\\repos\\TestWebApi\\TestWebApi\\obj\\",
+      "outputPath": "C:\\delet256\\Git\\TestWebApi\\TestWebApi\\TestWebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -9,3 +9,14 @@ C:\Users\delit\source\repos\TestWebApi\TestWebApi\obj\Debug\netcoreapp2.0\TestWe
 C:\Users\delit\source\repos\TestWebApi\TestWebApi\obj\Debug\netcoreapp2.0\TestWebApi.AssemblyInfo.cs
 C:\Users\delit\source\repos\TestWebApi\TestWebApi\obj\Debug\netcoreapp2.0\TestWebApi.dll
 C:\Users\delit\source\repos\TestWebApi\TestWebApi\obj\Debug\netcoreapp2.0\TestWebApi.pdb
+C:\delet256\Git\TestWebApi\TestWebApi\TestWebApi\bin\Debug\netcoreapp2.0\TestWebApi.deps.json
+C:\delet256\Git\TestWebApi\TestWebApi\TestWebApi\bin\Debug\netcoreapp2.0\TestWebApi.runtimeconfig.json
+C:\delet256\Git\TestWebApi\TestWebApi\TestWebApi\bin\Debug\netcoreapp2.0\TestWebApi.runtimeconfig.dev.json
+C:\delet256\Git\TestWebApi\TestWebApi\TestWebApi\bin\Debug\netcoreapp2.0\TestWebApi.dll
+C:\delet256\Git\TestWebApi\TestWebApi\TestWebApi\bin\Debug\netcoreapp2.0\TestWebApi.pdb
+C:\delet256\Git\TestWebApi\TestWebApi\TestWebApi\obj\Debug\netcoreapp2.0\TestWebApi.csproj.CoreCompileInputs.cache
+C:\delet256\Git\TestWebApi\TestWebApi\TestWebApi\obj\Debug\netcoreapp2.0\TestWebApi.AssemblyInfoInputs.cache
+C:\delet256\Git\TestWebApi\TestWebApi\TestWebApi\obj\Debug\netcoreapp2.0\TestWebApi.AssemblyInfo.cs
+C:\delet256\Git\TestWebApi\TestWebApi\TestWebApi\obj\Debug\netcoreapp2.0\TestWebApi.dll
+C:\delet256\Git\TestWebApi\TestWebApi\TestWebApi\obj\Debug\netcoreapp2.0\TestWebApi.pdb
+C:\delet256\Git\TestWebApi\TestWebApi\TestWebApi\obj\Debug\netcoreapp2.0\TestWebApi.csprojAssemblyReference.cache

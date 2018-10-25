@@ -7,34 +7,23 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using TestWebApi.Models;
 
-namespace WebApplication2.Controllers
+namespace TestWebApi.Controllers
 {
-
-
-
-
-    [Route("api/Message")]
-    public class ValuesController : Controller
+    /// <summary>
+    /// Controller
+    /// </summary>
+    [Route("api/message")]
+    public class MessageController : Controller
     {
-
-
-        // POST api/values
+        /// <summary>
+        /// Send message to pushover
+        /// </summary>
+        /// <param name="request">Data for send to pushover</param>
         [HttpPost]
-        public void Post([FromBody]RequestParameters item)
+        public void SendMessage([FromBody]RequestParameters request)
         {
-            var parameters = new NameValueCollection {
-                { "token", item.TokenApi },
-                { "user", item.UserKey },
-                { "message", item.Message }
-            };
-
-            using (var client = new WebClient())
-            {
-                client.UploadValues("https://api.pushover.net/1/messages.json", parameters);
-            }
-
+            var pushoverService = new PushoverService(request.ApiToken,request.UserKey);
+            pushoverService.Push(request.Message);
         }
-
-
     }
 }
