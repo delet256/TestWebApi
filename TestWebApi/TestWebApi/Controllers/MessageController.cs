@@ -20,10 +20,14 @@ namespace TestWebApi.Controllers
         /// </summary>
         /// <param name="request">Data for send to pushover</param>
         [HttpPost]
-        public void SendMessage([FromBody]RequestParameters request)
+        public IActionResult SendMessage([FromBody]RequestParameters request)
         {
-            var pushoverService = new PushoverService(request.ApiToken,request.UserKey);
-            pushoverService.Push(request.Message);
+            var pushoverService = new PushoverService(request.ApiToken, request.UserKey);
+            var response = pushoverService.Push(request.Message);
+            if (response.Status == 0)
+                return BadRequest(String.Join("\n", response.Errors));
+            else
+                return Ok("Success");
         }
     }
 }

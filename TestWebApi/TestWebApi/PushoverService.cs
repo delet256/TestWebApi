@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.IO;
 using System.Linq;
 using System.Net;
+using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using TestWebApi.Models;
 
 namespace TestWebApi
 {
@@ -29,17 +33,27 @@ namespace TestWebApi
         /// Push message via pushover
         /// </summary>
         /// <param name="message"></param>
-        public void Push(string message)
+        public PushoverResponse Push(string message)
         {
             var parameters = new NameValueCollection {
                 { "token", _apiToken },
                 { "user", _userKey },
                 { "message", message }
             };
-
-            using (var client = new WebClient())
+            try
             {
-                client.UploadValues("https://api.pushover.net/1/messages.json", parameters);
+                using (var client = new WebClient())
+                {
+                    var responseBytes = client.UploadValues("https://api.pushover.net/1/messages.json", parameters);
+                    var jsonString = Encoding.UTF8.GetString(responseBytes);
+                    return JsonConvert.DeserializeObject<PushoverResponse>(jsonString);
+                }
+            }
+            catch (System.Net.WebException ex)
+            {
+                
+                var exceptionResponseBody = new StreamReader(ex.Response.GetResponseStream()).ReadToEnd();
+                return JsonConvert.DeserializeObject<PushoverResponse>(exceptionResponseBody);
             }
         }
     }
