@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Threading.Tasks;
 
 namespace TestWebApi.Models
@@ -22,6 +23,13 @@ namespace TestWebApi.Models
         /// Gets or sets Message
         /// </summary>
         public string Message { get; set; }
-
+        /// <summary>
+        /// Gets or sets Title
+        /// </summary>
+        public string Title { get; set; }
+        /// <summary>
+        /// Get or sets Sound
+        /// </summary>
+        public Sounds Sound { get; set; }
     }
 }

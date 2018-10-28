@@ -19,6 +19,7 @@ namespace TestWebApi
         private readonly string _apiToken;
         private readonly string _userKey;
 
+
         /// <summary>
         /// Initialize new instance of PushoverService
         /// </summary>
@@ -33,12 +34,16 @@ namespace TestWebApi
         /// Push message via pushover
         /// </summary>
         /// <param name="message"></param>
-        public PushoverResponse Push(string message)
+        /// <param name="sound"></param>
+        /// <param name="title"></param>
+        public PushoverResponse Push(string message, string title, Sounds sound)
         {
             var parameters = new NameValueCollection {
                 { "token", _apiToken },
                 { "user", _userKey },
-                { "message", message }
+                { "message", message },
+                { "title", title },
+                { "sound", sound.ToString().ToLower() }
             };
             try
             {
@@ -51,7 +56,7 @@ namespace TestWebApi
             }
             catch (System.Net.WebException ex)
             {
-                
+
                 var exceptionResponseBody = new StreamReader(ex.Response.GetResponseStream()).ReadToEnd();
                 return JsonConvert.DeserializeObject<PushoverResponse>(exceptionResponseBody);
             }
